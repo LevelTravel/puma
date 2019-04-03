@@ -239,6 +239,7 @@ module Puma
           if @phased_state == :idle
             @phased_state = :waiting
             log "- Stopping #{w.pid} for phased upgrade..."
+            sleep(30)
           end
 
           w.term
